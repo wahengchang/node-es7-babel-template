@@ -2,6 +2,9 @@
 
 It is an node.js used ES7 template, compiled by babel 
 
+Medium story: [[Nodejs] BBB, Babel Burger Boilerplate](https://hackernoon.com/nodejs-bbb-babel-burger-boilerplate-b74107eff049 "[Nodejs] BBB, Babel Burger Boilerplate").
+
+[](https://hackernoon.com/nodejs-bbb-babel-burger-boilerplate-b74107eff049)
 
 
 ## Install
