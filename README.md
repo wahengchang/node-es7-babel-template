@@ -21,6 +21,7 @@ Edit main.js (default file, could be changed in es7compiler)
 ```js
 module.exports = function() {
 
+    //write ES7 code here
     (async function() {
         var sleep = function(para) {
             return new Promise(function(resolve, reject) {
