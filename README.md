@@ -10,36 +10,46 @@ Medium story: [[Nodejs] BBB, Babel Burger Boilerplate](https://hackernoon.com/no
 ## Install
 
 ```
-$ git clone git@github.com:wahengchang/node-es7-babel-template.git
-$ npm install
+$ npm install babel-cli babel-preset-es2015 --save-dev
 ```
 
+## To Use
+Modify start command, package.json
+```javascript
+ //./package.json
+  ...
 
-## Usage
+  "scripts": {
+    "start": "babel-node --presets es2015 app.js",
+  },
 
-Edit main.js (default file, could be changed in es7compiler)
-```js
-module.exports = function() {
-
-    //write ES7 code here
-    (async function() {
-        var sleep = function(para) {
-            return new Promise(function(resolve, reject) {
-                setTimeout(function() {
-                    console.log('para: ', para)
-                    resolve(para * para)
-                }, 1000)
-            })
-        }
-
-        var result = await sleep(2);
-        console.log('result: ', result);
-    }());
-
-}
+  ...
 ```
 
-run the script 
-```js
+Create a script with ES7 function, for example async/await
+```javascript
+ //./app.js
+
+(async function() {
+    var sleep = function(para) {
+        return new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                console.log('para: ', para)
+                resolve(para * para)
+            }, 1000)
+        })
+    }
+
+    var result = await sleep(2);
+    console.log('result: ', result);
+}());
+```
+
+Run the script 
+```
 $ npm start
+
+para:  2
+result:  4
+
 ```
